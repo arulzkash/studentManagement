@@ -45,7 +45,7 @@ class StudentController extends Controller
         }
 
         $student = new Student();
-        $student->user_id = 2;
+        $student->user_id = $request->user()->id;
         $student->class_id = 42;
         $student->name = $request->name;
         $student->email = $request->email;
